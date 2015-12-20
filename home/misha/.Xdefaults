@@ -6,6 +6,11 @@ URxvt.secondaryScroll: 0
 URxvt.font:     xft:Inconsolata     :size=12:antialias=true
 URxvt.boldFont: xft:Inconsolata:bold:size=12:antialias=true
 
+! Copy and pasting
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste 
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+
 ! C&P'd colors
 urxvt*transparent: true
 urxvt*shading: 15
