@@ -7,7 +7,7 @@ vain.widgets.terminal = "xterm"
 
 theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "inconsolata 9"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#9aa3b1" -- "#535d6c"

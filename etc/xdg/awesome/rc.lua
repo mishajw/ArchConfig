@@ -15,9 +15,9 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 
 -- Set right keymap
-awful.util.spawn("setxkbmap gb")
+awful.util.spawn_with_shell("setxkbmap gb")
 
--- Start Compton
+-- Start other programs
 awful.util.spawn_with_shell("compton --config ~/.compton.conf")
 awful.util.spawn_with_shell("killall launchy ; launchy")
 
@@ -309,16 +309,19 @@ globalkeys = awful.util.table.join(
 
     -- Brightness keys
     awful.key({ }, "#232", function()
-    	awful.util.spawn("xbacklight -dec 10") end),
+    	awful.util.spawn("xbacklight -dec 5") end),
     awful.key({ }, "#233", function()
-	    awful.util.spawn("xbacklight -inc 10") end),
+	    awful.util.spawn("xbacklight -inc 5") end),
     -- Volume keys
     awful.key({ }, "#121", function ()
       awful.util.spawn("amixer sset Master toggle") end),
     awful.key({ }, "#122", function ()
-      awful.util.spawn("amixer sset Master 10%-")   end),
+      awful.util.spawn("amixer sset Master 5%-")   end),
     awful.key({ }, "#123", function ()
-      awful.util.spawn("amixer sset Master 10%+")   end)
+      awful.util.spawn("amixer sset Master 5%+")   end),
+    -- Print screen
+    awful.key({ }, "#107", function ()
+      awful.util.spawn("deepin-screenshot")   end)
 )
 
 clientkeys = awful.util.table.join(
