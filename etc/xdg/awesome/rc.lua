@@ -19,6 +19,7 @@ awful.util.spawn_with_shell("setxkbmap gb")
 
 -- Start other programs
 awful.util.spawn_with_shell("compton --config ~/.compton.conf")
+awful.util.spawn_with_shell("killall nm-applet ; nm-applet")
 -- awful.util.spawn_with_shell("killall launchy ; launchy")
 
 
